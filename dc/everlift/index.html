@@ -53,8 +53,8 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 .topbar{background:linear-gradient(90deg,var(--accent-dark),var(--accent)); color:#fff; font-size:12.5px; font-weight:600; text-align:center; padding:6px 12px}
 .top-inner{display:flex; align-items:center; justify-content:space-between; height:60px; gap:10px}
 .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; letter-spacing:-.02em; min-width:0}
-.logo .mark{width:36px; height:36px; border-radius:10px; flex:none; display:grid; place-items:center; color:#fff; font-size:17px;
-  background:linear-gradient(135deg,var(--accent),var(--accent-dark))}
+.logo .mark{width:36px; height:36px; border-radius:10px; flex:none; display:grid; place-items:center; font-size:24px; line-height:1;
+  background:#fff; border:1px solid var(--line)}
 .logo small{font-weight:600; font-size:11px; color:var(--muted); display:block; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .vf{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--ok); background:var(--ok-bg);
   border:1px solid #bfe9cf; padding:6px 11px; border-radius:999px; white-space:nowrap}
@@ -296,7 +296,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   <div class="topbar">เว็บไซต์ทางการแห่งเดียวของผู้ผลิต · เก็บเงินปลายทาง</div>
   <div class="wrap top-inner">
     <div class="logo">
-      <span class="mark">E</span>
+      <span class="mark" id="logoFlag">🇹🇭</span>
       <span style="min-width:0">Everlift<sup style="font-size:11px">®</sup><small>เว็บไซต์ทางการแห่งเดียวของผู้ผลิต</small></span>
     </div>
     <div class="vf"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1 3 5v6c0 5.6 3.8 10.7 9 12 5.2-1.3 9-6.4 9-12V5l-9-4zm-1.2 15.2-4-4 1.4-1.4 2.6 2.6 5.6-5.6L17.8 9l-7 7.2z"/></svg><span>จำหน่ายโดยตรง</span></div>
@@ -325,9 +325,6 @@ body.free .disc,body:not(.free) .nodisc{display:none}
           <div class="stock-line">เหลือ: <b id="stockNum2">46</b> กล่องจากล็อตปัจจุบัน</div></div>
 
       <div id="buy">
-        <div class="badges-row">
-          <span class="pill ok">✔ ของแท้จากผู้ผลิต</span><span class="pill">💳 เก็บเงินปลายทาง (COD)</span><span class="pill">🚚 จัดส่งภายใน 1-3 วันทำการ</span>
-        </div>
         <h1>Everlift® — เว็บไซต์ทางการแห่งเดียวของผู้ผลิตในประเทศไทย</h1>
         <p class="sub-h">Everlift ส่งตรงจากผู้ผลิต: ไม่ต้องจ่ายล่วงหน้า จ่ายให้พนักงานส่งตอนรับของ</p>
         <div class="price-box">
@@ -336,7 +333,6 @@ body.free .disc,body:not(.free) .nodisc{display:none}
           <span class="save-badge disc">-50%</span><span class="save-abs disc">−990 ฿</span>
         </div>
         <p class="pricenote">ราคาโปรโมชั่นมีผลจนกว่าสินค้าล็อตปัจจุบันจะหมด</p>
-        <ul class="answers"><li>นี่คือ Everlift ตัวเดียวกับที่คุณเห็นในโฆษณา</li><li>ไม่ต้องจ่ายล่วงหน้า: จ่ายให้พนักงานส่งเมื่อพัสดุอยู่ในมือคุณแล้ว</li><li>หลังจากส่งแบบฟอร์ม เจ้าหน้าที่จะโทรหาคุณ ไม่มีการส่งข้อความโฆษณาตามมา</li></ul>
 
         <div class="form-card">
           <form class="order-form" autocomplete="on" novalidate>
@@ -371,13 +367,6 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   <div class="seal">
     <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#fff" stroke="#b98900" stroke-width="1.5"/><circle cx="20" cy="20" r="14.5" fill="none" stroke="#b98900" stroke-width=".8" stroke-dasharray="2 1.5"/><path d="M13.5 20.5l4 4 9-9" fill="none" stroke="#b98900" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     <div><b>สินค้าของแท้ — จำหน่ายโดยตรง</b><span>พัสดุทุกชิ้นส่งออกพร้อมซีลของผู้ผลิตและหมายเลขล็อต ไม่ผ่านคนกลาง ไม่บวกราคา</span></div>
-  </div>
-  <div class="medals">
-    <div class="medal flag"><svg viewBox="0 0 64 64"><defs><linearGradient id="mgf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9d976"/><stop offset=".5" stop-color="#d4a017"/><stop offset="1" stop-color="#f3c74f"/></linearGradient></defs><circle cx="32" cy="32" r="30" fill="url(#mgf)"/><circle cx="32" cy="32" r="25" fill="none" stroke="#fff8dc" stroke-width="1.5" stroke-dasharray="2 2"/><circle cx="32" cy="32" r="21" fill="#fffaf0"/></svg><span class="fl">🇹🇭</span><b>จัดส่งทั่วไทย</b></div>
-    <div class="medal"><svg viewBox="0 0 64 64"><defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9d976"/><stop offset=".5" stop-color="#d4a017"/><stop offset="1" stop-color="#f3c74f"/></linearGradient></defs><circle cx="32" cy="32" r="30" fill="url(#mg)"/><circle cx="32" cy="32" r="25" fill="none" stroke="#fff8dc" stroke-width="1.5" stroke-dasharray="2 2"/><circle cx="32" cy="32" r="21" fill="#fffaf0"/><path d="M22 32l7 7 13-14" fill="none" stroke="#b98900" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><b>บรรจุภัณฑ์ของแท้</b></div>
-    <div class="medal"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="url(#mg)"/><circle cx="32" cy="32" r="25" fill="none" stroke="#fff8dc" stroke-width="1.5" stroke-dasharray="2 2"/><circle cx="32" cy="32" r="21" fill="#fffaf0"/><rect x="19" y="24" width="26" height="17" rx="3" fill="none" stroke="#b98900" stroke-width="3"/><path d="M19 30h26" stroke="#b98900" stroke-width="3"/></svg><b>เก็บเงินปลายทาง (COD)</b></div>
-    <div class="medal"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="url(#mg)"/><circle cx="32" cy="32" r="25" fill="none" stroke="#fff8dc" stroke-width="1.5" stroke-dasharray="2 2"/><circle cx="32" cy="32" r="21" fill="#fffaf0"/><circle cx="30" cy="30" r="8" fill="none" stroke="#b98900" stroke-width="3"/><path d="M36 36l7 7" stroke="#b98900" stroke-width="3.5" stroke-linecap="round"/></svg><b>ตรวจสอบก่อนจ่าย</b></div>
-    <div class="medal"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="url(#mg)"/><circle cx="32" cy="32" r="25" fill="none" stroke="#fff8dc" stroke-width="1.5" stroke-dasharray="2 2"/><circle cx="32" cy="32" r="21" fill="#fffaf0"/><path d="M32 18l11 4v9c0 7-4.5 12.5-11 15-6.5-2.5-11-8-11-15v-9z" fill="none" stroke="#b98900" stroke-width="3" stroke-linejoin="round"/></svg><b>การรับประกันจากผู้ขาย</b></div>
   </div>
   <div class="certs">
     <button class="cert" type="button" data-i="0"><img src="../../img/cert1.webp" alt="" loading="lazy" width="620" height="930"><span class="txt"><span class="flag">🇹🇭</span><span class="t">จำหน่ายโดยตรง</span><span class="rule"></span><span class="p">คำสั่งซื้อดำเนินการโดยฝ่ายบริการลูกค้าของผู้ผลิตเอง ทุกคำสั่งซื้อได้รับการยืนยันทางโทรศัพท์ก่อนจัดส่ง</span><span class="prod">Everlift®</span></span></button>
@@ -597,11 +586,6 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   </div>
 </footer>
 
-<div class="sticky-cta" id="sticky">
-  <div class="p">990 ฿ <small>1980 ฿</small></div>
-  <a class="btn btn-primary btn-cta" href="#buy">สั่งซื้อของแท้</a>
-</div>
-<div class="sold-toast" id="toast"><div class="av" id="toastAv">A</div><div id="toastTx"></div></div>
 
 <script>
 (function(){
@@ -637,25 +621,15 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   rs();
   var L={"cc": "+66", "phMin": 9, "phMax": 9, "ph0": true, "fem": "^(สุดา|แพรว|พิมพ์|มะลิ|นุช|ศิริพร|เมย์|กัญญา|ฟ้า|จอย)(\\s|$)", "t1m": "เพิ่งสั่งซื้อ", "t1f": "เพิ่งสั่งซื้อ", "t2m": "เพิ่งสั่งซื้อ 2 กล่อง", "t2f": "เพิ่งสั่งซื้อ 2 กล่อง", "agoMin": " นาทีที่แล้ว", "agoH": " ชม. ที่แล้ว", "agoY": "เมื่อวาน", "agoD": " วันที่แล้ว", "names": ["สุดา", "สมชาย", "แพรว", "ธนกร", "พิมพ์", "เบิร์ด", "มะลิ", "ก้อง", "นุช", "อนุชา", "ศิริพร", "ต้น", "เมย์", "ณัฐพล", "กัญญา", "บอย", "ฟ้า", "วีระ", "จอย", "เอก"], "cities": ["กรุงเทพฯ", "นนทบุรี", "เชียงใหม่", "ขอนแก่น", "หาดใหญ่", "นครราชสีมา", "อุดรธานี", "ชลบุรี", "ภูเก็ต", "ระยอง", "สุราษฎร์ธานี", "พัทยา", "ปทุมธานี", "สมุทรปราการ", "อุบลราชธานี", "เชียงราย", "นครศรีธรรมราช", "พิษณุโลก", "ลำปาง", "สงขลา"]};   // локаль тостов/дат/телефона (генерится сборкой из i18n)
   var NAMES=L.names, CITIES=L.cities;
-  var toast=document.getElementById('toast'), tAv=document.getElementById('toastAv'), tTx=document.getElementById('toastTx');
   function drop(){
     if(stock>6){
       var d=Math.random()<.25?2:1; stock-=d; today+=d; rs(); rToday();
       [sn,sn2].forEach(function(el){ el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); });
-      var n=NAMES[rnd(0,NAMES.length-1)], c=CITIES[rnd(0,CITIES.length-1)];
-      var f=L.fem.test?L.fem.test(n):new RegExp(L.fem).test(n);
-      tAv.textContent=n[0]; tTx.innerHTML='<b>'+n+'</b> ('+c+') '+(d>1?(f?L.t2f:L.t2m):(f?L.t1f:L.t1m));
-      toast.classList.add('show'); setTimeout(function(){ toast.classList.remove('show'); },3800);
     }
     setTimeout(drop, rnd(18,55)*1000);
   }
   setTimeout(drop, rnd(7,14)*1000);
 
-  // --- липкая кнопка: показывать, когда форма первого экрана вне видимости ---
-  var sticky=document.getElementById('sticky'), firstForm=document.querySelector('#buy .form-card');
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){ sticky.classList.toggle('on', !es[0].isIntersecting); },{threshold:.15}).observe(firstForm);
-  } else sticky.classList.add('on');
 
   // --- FAQ ---
   document.querySelectorAll('.q button').forEach(function(btn){
@@ -706,6 +680,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   var CTY={}, CTYSEL=null;
   function setCountry(cc){ var c=CTY[cc]; if(!c) return; CTYSEL=cc; L.cc=c.cc; L.phMin=c.phMin; L.phMax=c.phMax; L.ph0=c.ph0; CCD=c.cc.replace(/\D/g,'');
     Array.prototype.forEach.call(document.querySelectorAll('.p48'),function(el){ el.textContent=c.flag+' '+c.cc; });
+    var lf=document.getElementById('logoFlag'); if(lf&&c.flag) lf.textContent=c.flag;
     Array.prototype.forEach.call(document.querySelectorAll('.price-new'),function(el){ el.textContent=c.price; });
     Array.prototype.forEach.call(document.querySelectorAll('.price-old'),function(el){ el.textContent=c.old; });
     Array.prototype.forEach.call(document.querySelectorAll('.order .p'),function(el){ if(el.firstChild) el.firstChild.nodeValue=c.price+' '; });
@@ -748,7 +723,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
       function send(){ d.gclid=gclid;
         fetch(WORKER+'/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
           .then(function(r){return r.json();})
-          .then(function(){ f.style.display='none'; if(ok) ok.style.display='block'; sticky.classList.remove('on'); })
+          .then(function(){ f.style.display='none'; if(ok) ok.style.display='block'; })
           .catch(function(){ btn.disabled=false; btn.textContent=BTN; alert('การเชื่อมต่อขัดข้อง กรุณาลองใหม่อีกครั้ง'); }); }
       if(!gclid&&hitP){ Promise.race([hitP,new Promise(function(r){setTimeout(r,1500);})]).then(send,send); } else send();
     });
